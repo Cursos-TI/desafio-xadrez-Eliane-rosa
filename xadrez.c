@@ -1,79 +1,38 @@
 #include <stdio.h>
 
 /*
- * Simulação de movimentos de peças de xadrez: Torre, Bispo e Rainha.
- * Cada peça utiliza uma estrutura de repetição diferente.
- * Não há entrada do usuário, valores são definidos por variáveis/constantes.
+ * Programa para demonstrar os movimentos das peças de xadrez, incluindo o Cavalo.
+ * O movimento do Cavalo implementado aqui é: duas casas para baixo e uma casa para a esquerda.
+ * Os movimentos são impressos um por linha, e o movimento do Cavalo é separado dos demais por uma linha em branco.
  */
 
 int main() {
-    // Número de casas que cada peça irá se mover
-    int casasTorre = 5;
-    int casasBispo = 5;
-    int casasRainha = 8;
+    // Exemplo de movimento de outras peças (pode ser removido se não quiser)
+    printf("Cima\n");
+    printf("Direita\n");
+    printf("Baixo\n");
+    printf("Esquerda\n");
 
-    int i; // Variável para controle dos loops
-
-    // -------------------------------
-    // Movimento da Torre (FOR)
-    // -------------------------------
-    // Torre move-se 5 casas para a direita
-    printf("Movimento da Torre:\n");
-    for (i = 1; i <= casasTorre; i++) {
-        printf("Direita\n");
-    }
+    // Linha em branco para separar o movimento do Cavalo
     printf("\n");
 
-    // -------------------------------
-    // Movimento do Bispo (WHILE)
-    // -------------------------------
-    // Bispo move-se 5 casas na diagonal para cima e à direita
-    printf("Movimento do Bispo:\n");
-    i = 1;
-    while (i <= casasBispo) {
-        printf("Cima Direita\n");
-        i++;
-    }
-    printf("\n");
+    // Definição das quantidades de casas a mover
+    int casas_baixo = 2;
+    int casas_esquerda = 1;
 
-    // -------------------------------
-    // Movimento da Rainha (DO-WHILE)
-    // -------------------------------
-    // Rainha move-se 8 casas para a esquerda
-    printf("Movimento da Rainha:\n");
-    i = 1;
-    do {
+    // Movimento do Cavalo: duas casas para baixo
+    // Utilizando um loop for para as duas casas para baixo
+    for (int i = 0; i < casas_baixo; i++) {
+        printf("Baixo\n");
+    }
+
+    // Agora, uma casa para a esquerda usando um loop while
+    int j = 0;
+    while (j < casas_esquerda) {
         printf("Esquerda\n");
-        i++;
-    } while (i <= casasRainha);
+        j++;
+    }
 
+    // Fim do programa
     return 0;
 }
-
-/*
-Saída esperada:
-
-Movimento da Torre:
-Direita
-Direita
-Direita
-Direita
-Direita
-
-Movimento do Bispo:
-Cima Direita
-Cima Direita
-Cima Direita
-Cima Direita
-Cima Direita
-
-Movimento da Rainha:
-Esquerda
-Esquerda
-Esquerda
-Esquerda
-Esquerda
-Esquerda
-Esquerda
-Esquerda
-*/
